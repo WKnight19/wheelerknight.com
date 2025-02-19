@@ -1,30 +1,29 @@
-import { useState, useRef } from "react";
-import { TiLocationArrow } from "react-icons/ti";
-import PropTypes from "prop-types";
+import { useState, useRef } from 'react'
+import { TiLocationArrow } from 'react-icons/ti'
+import PropTypes from 'prop-types'
 
-export const BentoTilt = ({ children, className = "" }) => {
-  const [transformStyle, setTransformStyle] = useState("");
-  const itemRef = useRef(null);
+export const BentoTilt = ({ children, className = '' }) => {
+  const [transformStyle, setTransformStyle] = useState('')
+  const itemRef = useRef(null)
 
   const handleMouseMove = (event) => {
-    if (!itemRef.current) return;
+    if (!itemRef.current) return
 
-    const { left, top, width, height } =
-      itemRef.current.getBoundingClientRect();
+    const { left, top, width, height } = itemRef.current.getBoundingClientRect()
 
-    const relativeX = (event.clientX - left) / width;
-    const relativeY = (event.clientY - top) / height;
+    const relativeX = (event.clientX - left) / width
+    const relativeY = (event.clientY - top) / height
 
-    const tiltX = (relativeY - 0.5) * 5;
-    const tiltY = (relativeX - 0.5) * -5;
+    const tiltX = (relativeY - 0.5) * 5
+    const tiltY = (relativeX - 0.5) * -5
 
-    const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`;
-    setTransformStyle(newTransform);
-  };
+    const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`
+    setTransformStyle(newTransform)
+  }
 
   const handleMouseLeave = () => {
-    setTransformStyle("");
-  };
+    setTransformStyle('')
+  }
 
   return (
     <div
@@ -36,26 +35,26 @@ export const BentoTilt = ({ children, className = "" }) => {
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
 export const BentoCard = ({ src, title, description, isComingSoon }) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [hoverOpacity, setHoverOpacity] = useState(0);
-  const hoverButtonRef = useRef(null);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
+  const [hoverOpacity, setHoverOpacity] = useState(0)
+  const hoverButtonRef = useRef(null)
 
   const handleMouseMove = (event) => {
-    if (!hoverButtonRef.current) return;
-    const rect = hoverButtonRef.current.getBoundingClientRect();
+    if (!hoverButtonRef.current) return
+    const rect = hoverButtonRef.current.getBoundingClientRect()
 
     setCursorPosition({
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
-    });
-  };
+    })
+  }
 
-  const handleMouseEnter = () => setHoverOpacity(1);
-  const handleMouseLeave = () => setHoverOpacity(0);
+  const handleMouseEnter = () => setHoverOpacity(1)
+  const handleMouseLeave = () => setHoverOpacity(0)
 
   return (
     <div className="relative size-full">
@@ -69,9 +68,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
         <div>
           <h1 className="bento-title special-font">{title}</h1>
-          {description && (
-            <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
-          )}
+          {description && <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>}
         </div>
 
         {isComingSoon && (
@@ -96,8 +93,8 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Features = () => (
   <section className="bg-black pb-52">
@@ -105,8 +102,8 @@ const Features = () => (
       <div className="px-5 py-32">
         <p className="font-circular-web text-lg text-blue-50">Discover More</p>
         <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Find out about some of my latest projects, work experience, skills,
-          goals, known languages/frameworks, and more.
+          Find out about some of my latest projects, work experience, skills, goals, known
+          languages/frameworks, and more.
         </p>
       </div>
 
@@ -169,17 +166,17 @@ const Features = () => (
       </div>
     </div>
   </section>
-);
+)
 
 BentoTilt.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-};
+}
 BentoCard.propTypes = {
   src: PropTypes.string,
   title: PropTypes.node,
   description: PropTypes.string,
   isComingSoon: PropTypes.bool,
-};
+}
 
-export default Features;
+export default Features

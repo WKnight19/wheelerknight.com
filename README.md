@@ -123,14 +123,17 @@ This project is licensed under the MIT License.
 ## Credits
 
 This project was built with large influence from the JavaScript Mastery Tutorial on YouTube
- - "Build and Deploy an Awwwards Winning Website | React.js, Tailwind CSS, GSAP"
 
- This Website, and the aformentioned tutorial template, is inspired from Zentry
- ```
- Zentry.com
- ```
+- "Build and Deploy an Awwwards Winning Website | React.js, Tailwind CSS, GSAP"
+
+This Website, and the aformentioned tutorial template, is inspired from Zentry
+
+```
+Zentry.com
+```
 
 ## To-Do
+
 - Fix Hard Data
 - Adjust Links
 - Add Personal Assets
@@ -138,4 +141,3 @@ This project was built with large influence from the JavaScript Mastery Tutorial
 - Change Layout
 - Add Contact Form
 - Add Pages
-
