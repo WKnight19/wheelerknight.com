@@ -103,22 +103,17 @@ const Features = () => (
   <section className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
-          Discover More
-        </p>
+        <p className="font-circular-web text-lg text-blue-50">Discover More</p>
         <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Find out about some of my latest projects, work experience, skills, goals, known languages/frameworks, and more.
+          Find out about some of my latest projects, work experience, skills,
+          goals, known languages/frameworks, and more.
         </p>
       </div>
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
           src="videos/feature-1.mp4"
-          title={
-            <>
-              Projects
-            </>
-          }
+          title={<>Projects</>}
           description="A collection of my latest projects, involving web development, game development, school projects and more."
           isComingSoon
         />
@@ -128,11 +123,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-2.mp4"
-            title={
-              <>
-                Experience/Education
-              </>
-            }
+            title={<>Experience/Education</>}
             description="A summary of my work experience and education, including internships, part-time jobs, and relevant coursework."
             isComingSoon
           />
@@ -141,11 +132,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
             src="videos/feature-3.mp4"
-            title={
-              <>
-                Skills
-              </>
-            }
+            title={<>Skills</>}
             description="A list of my skills, including programming languages, frameworks, and tools that I am proficient in."
             isComingSoon
           />
@@ -154,11 +141,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
             src="videos/feature-4.mp4"
-            title={
-              <>
-                Goals
-              </>
-            }
+            title={<>Goals</>}
             description="A summary of my short-term and long-term goals, including personal and professional aspirations."
             isComingSoon
           />
@@ -198,7 +181,5 @@ BentoCard.propTypes = {
   description: PropTypes.string,
   isComingSoon: PropTypes.bool,
 };
-
-
 
 export default Features;

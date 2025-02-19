@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the personal portfolio website of Wheeler Knight, showcasing skills, experience, projects, and more. The website is built using React.js, Tailwind CSS, and GSAP for animations.
+This is the personal portfolio website of Wheeler Knight, showcasing skills, experience, projects, and more. The website (based on Zentry.com) is built using React.js, Tailwind CSS, and GSAP for animations.
 
 ## Table of Contents
 
@@ -122,5 +122,20 @@ This project is licensed under the MIT License.
 
 ## Credits
 
-This project was built wit large influence from the JavaScript Mastery Tutorial on YouTube
+This project was built with large influence from the JavaScript Mastery Tutorial on YouTube
  - "Build and Deploy an Awwwards Winning Website | React.js, Tailwind CSS, GSAP"
+
+ This Website, and the aformentioned tutorial template, is inspired from Zentry
+ ```
+ Zentry.com
+ ```
+
+## To-Do
+- Fix Hard Data
+- Adjust Links
+- Add Personal Assets
+- Change Theme
+- Change Layout
+- Add Contact Form
+- Add Pages
+
