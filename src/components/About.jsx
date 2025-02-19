@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div id=" about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-general text-sm uppercase md:[text-10px]">Welcome to my portfolio!</p>
+        <p className="font-general text-base uppercase md:[text-10px]">Welcome to my portfolio!</p>
 
         <AnimatedTitle
           title="Disc<b>o</b>ver my skills, experience and pr<b>o</b>jects"
@@ -37,8 +37,8 @@ const About = () => {
         />
 
         <div className="about-subtext">
-          <p> Lorem ipsum</p>
-          <p className="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>About Me  |  Wheeler Knight</p>
+          <p className="text-gray-500"> I am an aspiring software developer from Alabama, looking for a summer internship to jumpstart my career and refine my skills. </p>
         </div>
       </div>
 
