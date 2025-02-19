@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 const Button = ({ title, id, leftIcon, containerClass }) => {
   return (
@@ -11,14 +11,14 @@ const Button = ({ title, id, leftIcon, containerClass }) => {
         <div>{title}</div>
       </span>
     </button>
-  );
-};
+  )
+}
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string,
   leftIcon: PropTypes.node,
   containerClass: PropTypes.string,
-};
+}
 
-export default Button;
+export default Button

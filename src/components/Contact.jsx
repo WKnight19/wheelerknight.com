@@ -1,7 +1,7 @@
+import { TbMessageCircleFilled } from "react-icons/tb";
 import AnimatedTitle from "./AnimatedTitle";
 import Button from "./Button";
 import PropTypes from "prop-types";
-import { TiLocationArrow } from "react-icons/ti";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
@@ -51,7 +51,7 @@ const Contact = () => {
                 https://wa.me/62895333330000
                 "
               title="Contact Me"
-              leftIcon={<TiLocationArrow />}
+              leftIcon={<TbMessageCircleFilled />}
               containerClass="bg-red-300 flex-center gap-1 mt-10"
             />        </div>
       </div>
