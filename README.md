@@ -132,6 +132,11 @@ This Website, and the aformentioned tutorial template, is inspired from Zentry
 Zentry.com
 ```
 
+```
+Music by Bensound.com/royalty-free-music
+License code: H4LMBTBZXCUSVSUT
+```
+
 ## To-Do
 
 - Fix Hard Data

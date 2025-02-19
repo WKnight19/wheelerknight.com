@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
+const Button = ({ title, id, leftIcon, containerClass }) => {
   return (
     <button
       id={id}
@@ -17,7 +17,6 @@ const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
 Button.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string,
-  rightIcon: PropTypes.node,
   leftIcon: PropTypes.node,
   containerClass: PropTypes.string,
 };

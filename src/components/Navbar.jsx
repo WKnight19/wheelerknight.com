@@ -1,12 +1,19 @@
+// Music by Bensound.com/royalty-free-music
+// License code: H4LMBTBZXCUSVSUT
+
+
 import clsx from "clsx";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
+import { FcMusic } from 'react-icons/fc'
+import { TbMessageCircleFilled } from 'react-icons/tb'
+
+
 
 import Button from "./Button";
 
-const navItems = ["Projects", "Experince/Education", "Skills", "About"];
+const navItems = ["Projects", "Experience", "Skills", "About", "Resume"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -26,6 +33,7 @@ const NavBar = () => {
     setIsAudioPlaying((prev) => !prev);
     setIsIndicatorActive((prev) => !prev);
   };
+
 
   // Manage audio playback
   useEffect(() => {
@@ -78,8 +86,8 @@ const NavBar = () => {
                 https://wa.me/62895333330000
                 "
               title="Contact Me"
-              leftIcon={<TiLocationArrow />}
-              containerClass="bg-red-300 md:flex hidden flex-center gap-1"
+              leftIcon={<TbMessageCircleFilled />}
+              containerClass="bg-red-300 md:flex hidden flex-center gap-2"
             />
           </div>
 
@@ -87,30 +95,20 @@ const NavBar = () => {
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
+                <a key={index} href={`#${item.toLowerCase()}`} className="nav-hover-btn">
                   {item}
                 </a>
               ))}
             </div>
 
-            <button
-              onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
-            >
-              <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
+            <button onClick={toggleAudioIndicator} className="ml-10 flex items-center space-x-0.5">
+              <FcMusic className="mr-1 mb-1 justify-center" />
+
+              <audio ref={audioElementRef} className="hidden" src="/audio/loop.mp3" loop />
               {[1, 2, 3, 4].map((bar) => (
                 <div
                   key={bar}
-                  className={clsx("indicator-line", {
+                  className={clsx('indicator-line', {
                     active: isIndicatorActive,
                   })}
                   style={{
@@ -123,7 +121,7 @@ const NavBar = () => {
         </nav>
       </header>
     </div>
-  );
+  )
 };
 
 export default NavBar;
