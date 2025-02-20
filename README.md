@@ -139,6 +139,5 @@ License code: H4LMBTBZXCUSVSUT
 
 ## To-Do
 
-- Change Theme
 - Add Pages
 - Add Contact Form
