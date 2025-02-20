@@ -139,10 +139,6 @@ License code: H4LMBTBZXCUSVSUT
 
 ## To-Do
 
-- Fix Hard Data
-- Adjust Links
-- Add Personal Assets
 - Change Theme
-- Change Layout
-- Add Contact Form
 - Add Pages
+- Add Contact Form
