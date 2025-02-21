@@ -1,20 +1,35 @@
-import Hero from './components/Hero'
-import About from './components/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './components/Navbar'
-import Features from './components/Features'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import Resume from './pages/Resume'
+import AboutMe from './pages/AboutMe'
+import Skills from './pages/Skills'
+import ContactMe from './pages/ContactMe'
+import Goals from './pages/Goals'
+import Projects from './pages/Projects'
+import Experience from './pages/Experience'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden ">
-      <NavBar />
-      <Hero />
-      <About />
-      <Features />
-      <Contact />
-      <Footer />
-    </main>
+    <Router>
+      <ScrollToTop />
+      <div className="relative min-h-screen w-screen overflow-x-hidden">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<ContactMe />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

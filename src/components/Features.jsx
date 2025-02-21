@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { TiLocationArrow } from 'react-icons/ti'
 import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom' // Add this import
 
 export const BentoTilt = ({ children, className = '' }) => {
   const [transformStyle, setTransformStyle] = useState('')
@@ -38,7 +39,9 @@ export const BentoTilt = ({ children, className = '' }) => {
   )
 }
 
-export const BentoCard = ({ src, title, description, isComingSoon }) => {
+export const BentoCard = ({ src, title, description, isComingSoon, path }) => {
+  // Add path prop
+  const navigate = useNavigate() // Add this
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
   const [hoverOpacity, setHoverOpacity] = useState(0)
   const hoverButtonRef = useRef(null)
@@ -74,6 +77,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
         {isComingSoon && (
           <div
             ref={hoverButtonRef}
+            onClick={() => navigate(path)} // Add this
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -113,6 +117,7 @@ const Features = () => (
           title={<>Projects</>}
           description="A collection of my latest projects, involving web development, game development, school projects and more."
           isComingSoon
+          path="/projects" // Add path prop
         />
       </BentoTilt>
 
@@ -123,6 +128,7 @@ const Features = () => (
             title={<>Experience</>}
             description="A summary of my work experience and education, including internships, part-time jobs, and relevant coursework."
             isComingSoon
+            path="/experience" // Add path prop
           />
         </BentoTilt>
 
@@ -132,6 +138,7 @@ const Features = () => (
             title={<>Skills</>}
             description="A list of my skills, including programming languages, frameworks, and tools that I am proficient in."
             isComingSoon
+            path="/skills" // Add path prop
           />
         </BentoTilt>
 
@@ -141,6 +148,7 @@ const Features = () => (
             title={<>Goals</>}
             description="A summary of my short-term and long-term goals, including personal and professional aspirations."
             isComingSoon
+            path="/goals" // Add path prop
           />
         </BentoTilt>
 
@@ -148,9 +156,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-5.mp4"
             title={<>About Me</>}
-            description="A brief introduction about myself, including my background, interests, and hobbies.
-            "
+            description="A brief introduction about myself, including my background, interests, and hobbies."
             isComingSoon
+            path="/about" // Add path prop
           />
         </BentoTilt>
 
@@ -177,6 +185,7 @@ BentoCard.propTypes = {
   title: PropTypes.node,
   description: PropTypes.string,
   isComingSoon: PropTypes.bool,
+  path: PropTypes.string, // Add this
 }
 
 export default Features

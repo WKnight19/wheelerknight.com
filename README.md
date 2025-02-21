@@ -2,7 +2,15 @@
 
 ## Overview
 
-This is the personal portfolio website of Wheeler Knight, showcasing skills, experience, projects, and more. The website (based on Zentry.com) is built using React.js, Tailwind CSS, and GSAP for animations.
+A modern, interactive portfolio website showcasing Wheeler Knight's professional journey and technical expertise.
+
+Built with:
+
+- React.js for UI components
+- Tailwind CSS for styling
+- GSAP for animations
+- React Router for navigation
+- Vite for build tooling
 
 ## Table of Contents
 
@@ -15,6 +23,13 @@ This is the personal portfolio website of Wheeler Knight, showcasing skills, exp
 - [Scripts](#scripts)
 - [Dependencies](#dependencies)
 - [License](#license)
+- [Credits](#credits)
+- [To-Do](#to-do)
+- [Component Documentation](#component-documentation)
+- [Key Features](#key-features)
+- [Development](#development)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
 ## Installation
 
@@ -132,12 +147,82 @@ This Website, and the aformentioned tutorial template, is inspired from Zentry
 Zentry.com
 ```
 
-```
-Music by Bensound.com/royalty-free-music
-License code: H4LMBTBZXCUSVSUT
-```
-
 ## To-Do
 
-- Add Pages
+- Fix Hard Data
+- Adjust Links
+- Add Personal Assets
+- Change Theme
+- Change Layout
 - Add Contact Form
+- Add Pages
+
+## Component Documentation
+
+### Navigation
+
+The site uses React Router for navigation between different sections:
+
+- `/`: Home page with Hero section
+- `/about`: About me page
+- `/projects`: Portfolio projects
+- `/skills`: Technical skills
+- `/experience`: Work experience
+- `/contact`: Contact form
+- `/resume`: Downloadable resume
+- `/goals`: Professional goals
+
+### Key Features
+
+- Responsive design
+- Interactive video transitions
+- Background music toggle
+- GSAP animations
+- Custom UI components
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Setup
+
+```bash
+git clone [repository-url]
+cd wheelerknight.com
+npm install
+npm run dev
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```
+VITE_CONTACT_EMAIL=your@email.com
+```
+
+### Adding New Components
+
+Place new components in `src/components/` following the existing pattern:
+
+```
+ComponentName/
+├── index.jsx
+├── styles.css (if needed)
+└── utils.js (if needed)
+```
+
+## Deployment
+
+The site is deployed on [platform] and can be accessed at wheelerknight.com
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request

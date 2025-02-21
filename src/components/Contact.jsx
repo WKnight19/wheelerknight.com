@@ -1,4 +1,6 @@
 import { TbMessageCircleFilled } from 'react-icons/tb'
+import { useNavigate } from 'react-router-dom'
+import { TiLocationArrow } from 'react-icons/ti'
 import AnimatedTitle from './AnimatedTitle'
 import Button from './Button'
 import PropTypes from 'prop-types'
@@ -10,6 +12,8 @@ const ImageClipBox = ({ src, clipClass }) => (
 )
 
 const Contact = () => {
+  const navigate = useNavigate()
+
   return (
     <div id="contact" className="my-20 min-h-96 w-screen  px-10">
       <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
@@ -22,7 +26,6 @@ const Contact = () => {
         </div>
 
         <div className="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
-        
           <ImageClipBox src="/img/main.webp" clipClass="sword-man-clip-path md:scale-125" />
         </div>
 
@@ -34,12 +37,10 @@ const Contact = () => {
           />
           <Button
             id="contact-button"
-            href="
-                https://wa.me/62895333330000
-                "
             title="Contact Me"
-            leftIcon={<TbMessageCircleFilled />}
+            leftIcon={<TiLocationArrow />}
             containerClass="bg-red-300 flex-center gap-1 mt-10"
+            onClick={() => navigate('/contact')}
           />{' '}
         </div>
       </div>
