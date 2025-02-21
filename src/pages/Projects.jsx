@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <>
       <About {...hero} />
-      <div className="bg-zinc-900 pt-12 text-white">
+      <div className="bg-zinc-900 py-12 text-white">
         <div className="container mx-auto px-4">
           <AnimatedTitle title="Projects" containerClass="text-center mb-6" />
           <div className="grid gap-8 md:grid-cols-2">

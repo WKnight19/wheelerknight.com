@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <>
       <About {...hero} />
-      <div className="bg-zinc-900 pt-12 text-white">
+      <div className="bg-zinc-900 pt-12 pb-20 text-white">
         <div className="container mx-auto px-4">
           <AnimatedTitle title="Experience" containerClass="text-center mb-6" />
           <div className="mx-auto max-w-3xl space-y-8">

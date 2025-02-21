@@ -8,7 +8,7 @@ const Goals = () => {
   return (
     <>
       <About {...hero} />
-      <div className="bg-zinc-900 pt-12 text-white">
+      <div className="bg-zinc-900 py-12 text-white">
         <div className="container mx-auto px-4">
           <AnimatedTitle title="Career Goals" containerClass="text-center mb-6" />
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
